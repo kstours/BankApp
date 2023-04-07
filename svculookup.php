@@ -7,5 +7,5 @@ if ($AcntNum == "6789") {
     $response = "Jones,Mellisa";
 }
 
-echo $response;
+print $response;
 ?>
