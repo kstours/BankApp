@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<body>
-<p>Authorized Use Only</p>
 <?php
 $AcntNum = $_GET['acntnumb'];
-echo $AcntNum;
-?>
+if ($AcntNum = "6789") {
+    $response = "Smith,Jason";
+} else {
+    $response = "Jones,Mellisa"
+}
 
-</body>
-</html>
+echo $response;
+?>
