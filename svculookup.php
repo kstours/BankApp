@@ -1,10 +1,10 @@
 <?php
 
-echo $AcntNum;
+$AcntNum = $_GET['acntnumb'];
 if ($AcntNum == "6789") {
-    $response = "Smith,Jason";
+    $response = "Smith,Jason "+$AcntNum;
 } else {
-    $response = "Jones,Mellisa";
+    $response = "Jones,Mellisa "+ $AcntNum;
 }
 
 print $response;
