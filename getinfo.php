@@ -4,7 +4,7 @@
         <?php
         echo $_POST["AcntNum"];
         $url= "https://ptrbankapp.azurewebsites.net/svclookup.php?acntnumb=55467";
-        $response = fopen($url, r);
+        $response = file_get_contents($url);
         echo "<br>response: ";
         echo $response;
         ?>
