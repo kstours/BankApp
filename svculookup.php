@@ -2,9 +2,9 @@
 
 $AcntNum = $_GET['acntnumb'];
 if ($AcntNum == "6789") {
-    $response = "Smith,Jason "+$AcntNum;
+    $response = "Smith,Jason";
 } else {
-    $response = "Jones,Mellisa "+ $AcntNum;
+    $response = "Jones,Mellisa";
 }
 
 print $response;
