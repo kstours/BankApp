@@ -1,5 +1,5 @@
 <?php
-$servername = "ptrbankapp2-server";
+$servername = "ptrbankapp2-server.mysql.database.azure.com";
 $username = "srkxelcnue";
 $password = "31VNTO0TBI673202$";
 
