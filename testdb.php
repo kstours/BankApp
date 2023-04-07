@@ -1,7 +1,7 @@
 <?php
-$servername = "ptrsrvdb1";
-$username = "mysqladmin";
-$password = "amL732b@";
+$servername = "ptrbankapp2-server";
+$username = "srkxelcnue";
+$password = "31VNTO0TBI673202$";
 
 try {
   $conn = new PDO("mysql:host=$servername", $username, $password);
