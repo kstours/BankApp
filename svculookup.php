@@ -7,7 +7,7 @@ $servername = "ptrbankapp2-server.mysql.database.azure.com";
 $username = "srkxelcnue";
 $password = "31VNTO0TBI673202$";
 $dbname = "ptrbankapp2-database";
-$response ="NoValueSet"
+$response ="NoValueSet";
 
 
 try {
@@ -25,7 +25,7 @@ try {
             echo $row['FNAME'];
             $response = $row['FNAME'];
         }
-        unset($res)
+        unset($res);
     } else {
         echo "NoRecord";
     }

@@ -3,7 +3,8 @@
         You entered the following account number: 
         <?php
         echo $_POST["AcntNum"];
-        $url= "https://ptrbankapp2.azurewebsites.net/svculookup.php?acntnumb=55467";
+        $Accnt = $_POST["AcntNum"];
+        $url= "https://ptrbankapp2.azurewebsites.net/svculookup.php?acntnumb=$Accnt";
         $response = file_get_contents($url);
         echo "<br>response: ";
         echo $response;
