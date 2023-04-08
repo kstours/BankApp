@@ -1,6 +1,8 @@
+<p>Authorized Use Only</p>
 <?php
 
 $AcntNum = $_GET['acntnumb'];
+echo $AcntNum;
 $Queary = "SELECT ID, FNAME FROM userdata WHERE ID=$AcntNum";
 
 $servername = "ptrbankapp2-server.mysql.database.azure.com";
@@ -35,7 +37,7 @@ try {
 }catch (PDOException $e) {
     die('ERROR: '.$e->getMessage());
 }
-unset($conn)
+unset($conn);
 $conn = null;
 
 print $response;
