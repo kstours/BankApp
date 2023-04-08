@@ -1,16 +1,19 @@
 <html>
     <body>
-        You entered the following account number: 
+        <p>Account Options<p><br><br> 
         <?php
-        echo $_POST["AcntNum"];
+        echo "Account Number: ".$_POST["AcntNum"];
         $Accnt = $_POST["AcntNum"];
-        $url= "https://ptrbankapp2.azurewebsites.net/svculookup.php?acntnumb=$Accnt";
+        $url= "https://ptrbankapp2.azurewebsites.net/svculookup2.php?acntnumb=$Accnt";
         $response = file_get_contents($url);
-        echo "<br>response: ";
+        echo "<br>Account Name: ";
         echo $response;
         ?>
         <br><br>
-        <a id="enter" href="BankMain.php">Enter Test App</a><br><br>
+        <p>Available Account Actions:<p><br><br>
+        <a id="balance" href="ceckbal.php">Check Balances</a><br><br>
+        <a id="paycc" href="paycc.php">Pay Credit Card</a><br><br>
+        <a id="enter" href="BankMain.php">Log Out</a><br><br>
     </body>
 
 </html>
