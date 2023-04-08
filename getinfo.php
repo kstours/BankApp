@@ -15,6 +15,9 @@
         <button onclick="document.location='checkbal.php'">Check Balances</button><br>
         <a id="paycc" href="paycc.php">Pay Credit Card</a><br><br>
         <a id="enter" href="BankMain.php">Log Out</a><br><br>
+        <?php
+        echo'<button onclick="document.location="checkbal.php"">Check Balances</button><br>';
+        ?>
     </body>
 
 </html>
