@@ -7,6 +7,7 @@ $servername = "ptrbankapp2-server.mysql.database.azure.com";
 $username = "srkxelcnue";
 $password = "31VNTO0TBI673202$";
 $dbname = "ptrbankapp2-database";
+$response ="NoValueSet"
 
 
 try {
@@ -22,6 +23,7 @@ try {
     if (res->rowCount() > 0) {
         while ($row = $res->fetch()) {
             echo $row['FNAME'];
+            $response = $row['FNAME'];
         }
         unset($res)
     } else {
