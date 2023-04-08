@@ -11,7 +11,7 @@
         ?>
         <br><br>
         <p>Available Account Actions:<p><br><br>
-        <a id="balance" href="ceckbal.php">Check Balances</a><br><br>
+        <a id="balance" href="checkbal.php">Check Balances</a><br><br>
         <a id="paycc" href="paycc.php">Pay Credit Card</a><br><br>
         <a id="enter" href="BankMain.php">Log Out</a><br><br>
     </body>
