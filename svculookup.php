@@ -15,6 +15,8 @@ $response ="NoValueSet";
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  echo "<br>connection established<br>";
+
 
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
@@ -24,7 +26,7 @@ try {
     $res = $conn->query($sql);
     if (res->rowCount() > 0) {
         while ($row = $res->fetch()) {
-            echo $row['FNAME'];
+            echo "fname= ".$row['FNAME'];
             $response = $row['FNAME'];
         }
         unset($res);
