@@ -19,6 +19,6 @@ try {
   echo "Table created successfully";
   $conn = null
 } catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
+  echo $sql . "<br>" . $e->getMessage();
 }
 ?>
