@@ -2,7 +2,7 @@
 
 $AcntNum = $_GET['acntnumb'];
 #echo $AcntNum;
-$Query = "SELECT ID, FNAME FROM userdata WHERE ID=$AcntNum";
+$Query = "SELECT * FROM userdata WHERE ID=$AcntNum";
 
 $servername = "ptrbankapp2-server.mysql.database.azure.com";
 $username = "srkxelcnue";
@@ -21,8 +21,7 @@ try {
   echo "Error: " . $e->getMessage();
 }
 try {
-    $sql ="Select * from userdata WHERE ID=$AcntNum";
-    $row=$dbo->query($Query);
+    $row=$conn->query($Query);
     $row=$row->fetch();
     echo $row['FNAME'];
 }catch (PDOException $e) {
