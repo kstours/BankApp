@@ -9,12 +9,12 @@ try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected successfully";
+  echo "Connected to DB successfully";
 } catch(PDOException $e) {
   echo "Connection failed: " . $e->getMessage();
 }
 
-$sql = "SELECT ID,, FNAME CHKBAL, CCBAL FROM USERDATA";
+$sql = "SELECT ID, FNAME, CHKBAL, CCBAL FROM USERDATA";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
