@@ -4,30 +4,44 @@ $username = "srkxelcnue";
 $password = "31VNTO0TBI673202$";
 $dbname = "ptrbankapp2-database";
 
+echo "<table style='border: solid 1px black;'>";
+echo "<tr><th>Id</th><th>Firstname</th><th>Chk Bal</th></tr>";
+
+class TableRows extends RecursiveIteratorIterator {
+  function __construct($it) {
+    parent::__construct($it, self::LEAVES_ONLY);
+  }
+
+  function current() {
+    return "<td style='width:150px;border:1px solid black;'>" . parent::current(). "</td>";
+  }
+
+  function beginChildren() {
+    echo "<tr>";
+  }
+
+  function endChildren() {
+    echo "</tr>" . "\n";
+  }
+}
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-  // set the PDO error mode to exception
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  echo "Connected to DB successfully";
-} catch(PDOException $e) {
-  echo "Connection failed: " . $e->getMessage();
-}
+  $stmt = $conn->prepare("SELECT ID, FNAME, CHKBAL FROM userdata");
+  $stmt->execute();
 
-$sql = "SELECT ID, FNAME, CHKBAL, CCBAL FROM USERDATA";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  // output data of each row
-  while($row = $result->fetch_assoc()) {
-    echo "Acct num: " . $row["ID"]. " - Name: " . $row["FNAME"]. " Checking: " . $row["CHKBAL"]. "<br>";
+  // set the resulting array to associative
+  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+  foreach(new TableRows(new RecursiveArrayIterator($stmt->fetchAll())) as $k=>$v) {
+    echo $v;
   }
-} else {
-  echo "0 results";
+} catch(PDOException $e) {
+  echo "Error: " . $e->getMessage();
 }
-
-
 $conn = null;
+echo "</table>";
+
 ?>
 
 <br><br><a id="enter" href="BankMain.php">Return to Main Page</a><br><br>
