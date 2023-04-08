@@ -12,16 +12,28 @@ $dbname = "ptrbankapp2-database";
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->prepare($Queary);
-  $stmt->execute();
-
-  // set the resulting array to associative
-  $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
-  $response = $result;
 
 } catch(PDOException $e) {
   echo "Error: " . $e->getMessage();
 }
+try {
+    $sql ="Select * from userdata WHERE ID=$AcntNum";
+    $res = $conn->query($sql);
+    if (res->rowCount() > 0) {
+        while ($row = $res->fetch()) {
+            echo $row['FNAME'];
+        }
+        unset($res)
+    } else {
+        echo "NoRecord";
+    }
+
+
+
+}catch (PDOException $e) {
+    die('ERROR: '.$e->getMessage());
+}
+unset($conn)
 $conn = null;
 
 print $response;
