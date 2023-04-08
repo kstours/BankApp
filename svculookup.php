@@ -24,17 +24,15 @@ try {
 try {
     $sql ="Select * from userdata WHERE ID=$AcntNum";
     $res = $conn->query($sql);
-    if (res->rowCount() > 0) {
+    #if (res->rowCount() > 0) {
         while ($row = $res->fetch()) {
             echo "fname= ".$row['FNAME'];
             $response = $row['FNAME'];
         }
         unset($res);
-    } else {
-        echo "NoRecord";
-    }
-
-
+    #} else {
+    #    echo "NoRecord";
+    #}
 
 }catch (PDOException $e) {
     die('ERROR: '.$e->getMessage());
