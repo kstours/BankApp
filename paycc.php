@@ -27,7 +27,7 @@ $conn = null;
         <form action="payment.php" method="post">
             Ammount of Payment: <input type="text" name="payment"><br>
             <?php
-            echo '<input type="hidden" id="Accnt" name="Accnt" value="'.$Accnt.'">';
+            echo '<input type="hidden" id="Accnt" name="Accnt" value='.$AcntNum.'>';
             ?>
             <input type="submit">
         </form>
