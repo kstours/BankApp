@@ -6,7 +6,8 @@ session_start();
 $AcntNum = $_GET['acntnumb'];
 #$AcntNum = "306655";
 echo 'Account Number: '.$AcntNum;
-echo 'Session variable: '.$_SESSION["account"];
+echo '<br>Session variable: '.$_SESSION["account"];
+echo '<br>Test Value: '.$_SESSION["testvalue"];
 
 $Query = "SELECT * FROM userdata WHERE ID=".$AcntNum;
 require "config.php";

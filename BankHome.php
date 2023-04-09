@@ -6,6 +6,8 @@
         echo "Account Number: ".$_POST["AcntNum"];
         $Accnt = $_POST["AcntNum"];
         $_SESSION["account"] = $Accnt;
+        $_SESSION["testvalue"] = "TestValue";
+        echo '<br>Session variable: '.$_SESSION["account"];
         $url= "https://ptrbankapp2.azurewebsites.net/svculookup2.php?acntnumb=$Accnt";
         $response = file_get_contents($url);
         echo "<br>Account Name: ";
