@@ -12,11 +12,11 @@
         <br><br>
         <p>Available Account Actions:<p><br><br>
         <?php
-        echo 'Check your balances       ';
+        echo 'Check your balances';
         echo '<form method="POST" action=checkbal.php?acntnumb='.$Accnt.'>
             <input type="submit"/>
             </form>';
-        echo 'Make a Payment       ';
+        echo 'Make a Payment';
         echo '<form method="POST" action=paycc.php?acntnumb='.$Accnt.'>
             <input type="submit"/>
             </form>';

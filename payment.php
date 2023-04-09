@@ -1,7 +1,6 @@
 <?php
 
-$Payment = $_GET['payment'];
-#$AcntNum = "306655";
+$Payment = $_POST['payment'];
 echo 'Payment: '.$Payment;
 
 ?>

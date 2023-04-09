@@ -29,9 +29,7 @@ $conn = null;
             <input type="submit">
         </form>
 
-    <br><a id="enter" href="getinfo.php">Back to Options</a><br>
-    <br><a id="enter" href="BankMain.php">Log Out</a><br>
     </body>
-
+        <br><a id="enter" href="getinfo.php">Back to Options</a><br>
         <a id="enter" href="BankMain.php">Log Out</a><br><br>
     </body>
