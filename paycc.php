@@ -1,8 +1,12 @@
+<?php
+session_start();
+?>
+
 <html>
     <body>
         <p>Make Payment<p><br><br> 
 <?php
-session_start();
+
 $AcntNum = $_GET['acntnumb'];
 #$AcntNum = "306655";
 echo 'Account Number: '.$AcntNum;

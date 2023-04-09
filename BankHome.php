@@ -1,8 +1,10 @@
+<?php
+        session_start();
+?>
 <html>
     <body>
         <p>Account Options<p><br><br> 
         <?php
-        session_start();
         echo "Account Number: ".$_POST["AcntNum"];
         $Accnt = $_POST["AcntNum"];
         $_SESSION["account"] = $Accnt;
