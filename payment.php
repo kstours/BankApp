@@ -5,7 +5,8 @@ $Accntnum = $_POST['Accnt'];
 echo '<br>Payment: '.$Payment;
 echo '<br>Account: '.$Accntnum;
 
-$Query = "SELECT * FROM userdata WHERE ID=".$AcntNum;
+$Query = "SELECT * FROM userdata WHERE ID=".$AccntNum;
+echo $Query;
 require "config.php";
 
 try {

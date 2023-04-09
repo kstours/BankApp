@@ -18,7 +18,8 @@
         echo $response;
         ?>
         <br><br>
-        <p>Available Account Actions:<p><br><br>
+        <h2>Available Account Actions:</h2><br><br>
+        <p>
         <?php
         echo 'Make a Credit Card Payment';
         echo '<form method="POST" action=paycc.php?acntnumb='.$Accnt.'>
@@ -26,6 +27,7 @@
             </form>';
         ?>
         <br><br>
+        <p>
         <button onclick="window.location.href='BankMain.php';">
             Logout
     </body>

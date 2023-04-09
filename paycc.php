@@ -5,6 +5,7 @@ session_start();
 <html>
     <body>
         <h1>Make Payment<h1><br><br> 
+        <p>
 <?php
 
 #$AcntNum = $_GET['acntnumb'];
@@ -27,6 +28,7 @@ unset($conn);
 $conn = null;
 
 ?>
+        </p>
         <form action="payment.php" method="post">
             Ammount of Payment: <input type="text" name="payment"><br>
             <?php
