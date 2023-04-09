@@ -17,13 +17,13 @@ try {
     echo "<br>Checking Balance :".$row['CHKBAL'];
     echo "<br>Credit Card Balance :".$row['CCBAL'];
 }catch (PDOException $e) {
-    die('Select ERROR: '.$e->getMessage());
+    die('<br>Select ERROR: '.$e->getMessage());
 }
 unset($conn);
 $conn = null;
 
 #print $response;
 ?>
-
-        <a id="enter" href="BankMain.php">Log Out</a><br><br>
+    <br><a id="enter" href="getinfo.php">Back to Options</a><br>
+    <br><a id="enter" href="BankMain.php">Log Out</a><br>
     </body>
