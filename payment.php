@@ -14,7 +14,10 @@ try {
     $row=$row->fetch();
     echo "<br>Checking Balance :".$row['CHKBAL'];
     echo "<br>Credit Card Balance :".$row['CCBAL'];
-    var_dump(is_float($row['CHKBAL']));
+    echo "<br";
+    $CHKBAL = floatval($row['CHKBAL']);
+
+    var_dump(is_float($CHKBAL));
 }catch (PDOException $e) {
     die('<br>Select ERROR: '.$e->getMessage());
 }
