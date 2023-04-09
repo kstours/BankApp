@@ -6,7 +6,7 @@ echo '<br>Payment: '.$Payment;
 echo '<br>Account: '.$Accntnum;
 
 $Query = "SELECT * FROM userdata WHERE ID=".$Accntnum;
-echo '<br>'.$Query;
+
 require "config.php";
 
 try {
@@ -14,13 +14,18 @@ try {
     $row=$row->fetch();
     echo "<br>Checking Balance :".$row['CHKBAL'];
     echo "<br>Credit Card Balance :".$row['CCBAL'];
-    echo "<br";
+    echo "<br>";
     $CHKBAL = floatval($row['CHKBAL']);
+    $CCBAL = floatval($row['CCBAL']);
     $CHKBAL = $CHKBAL - $Payment;
-    echo "<br>New Balance: ";
+    $CCBAL = $CCBAL - $Payment;
+    echo "<br>New CHK Balance: ";
     echo $CHKBAL;
+    echo "<br>New CC Balance: ";
+    echo $CCBAL;
+    $sql = "UPDATE userdata SET CHKBAL =".$CHKBAL."WHERE ID=".$Accntnum;
+    echo "<br>".$sql;
 
-    var_dump(is_float($CHKBAL));
 }catch (PDOException $e) {
     die('<br>Select ERROR: '.$e->getMessage());
 }
