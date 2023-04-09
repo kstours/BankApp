@@ -28,7 +28,8 @@ try {
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
-    header("Location:BankHome.php");
+    header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
+    exit;
 
 }catch (PDOException $e) {
     die('<br>Select ERROR: '.$e->getMessage());
