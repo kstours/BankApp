@@ -11,13 +11,19 @@
         ?>
         <br><br>
         <p>Available Account Actions:<p><br><br>
+        <?php
+        echo '<form method="POST" action=checkbal.php?acntnumb=$Accnt">
+            <input type="submit"/>
+            </form>';
+        echo '<form method="POST" action=checkbal.php?acntnumb='.$Accnt.'">
+            <input type="submit"/>
+            </form>';
+
+        ?>
         <a id="balance" href="checkbal.php">Check Balances</a><br><br>
-        <button onclick="document.location='checkbal.php'">Check Balances</button><br>
         <a id="paycc" href="paycc.php">Pay Credit Card</a><br><br>
         <a id="enter" href="BankMain.php">Log Out</a><br><br>
-        <?php
-        echo'<button onclick="document.location="checkbal.php"">Check Balances</button><br>';
-        ?>
+
     </body>
 
 </html>

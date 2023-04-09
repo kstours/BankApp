@@ -23,6 +23,7 @@ try {
 $conn = null;
 
 ?>
+<br><br><a id="querytest" href="testquery.php">Run Test Query</a><br><br>
 <br><a id="exit" href="index.html">Exit Test Page</a><br>
 </body>
 </html>

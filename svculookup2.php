@@ -1,7 +1,6 @@
 <?php
 
 $AcntNum = $_GET['acntnumb'];
-#echo $AcntNum;
 $Query = "SELECT * FROM userdata WHERE ID=$AcntNum";
 
 $servername = "ptrbankapp2-server.mysql.database.azure.com";
