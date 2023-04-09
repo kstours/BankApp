@@ -23,11 +23,12 @@ try {
     echo $CHKBAL;
     echo "<br>New CC Balance: ";
     echo $CCBAL;
-    $sql = "UPDATE userdata SET CHKBAL =".$CHKBAL." WHERE ID=".$Accntnum;
+    $sql = "UPDATE userdata SET CHKBAL =".$CHKBAL.",CCBAL=".$CCBAL." WHERE ID=".$Accntnum;
     echo "<br>".$sql;
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
+    header("Location:BankHome.php");
 
 }catch (PDOException $e) {
     die('<br>Select ERROR: '.$e->getMessage());

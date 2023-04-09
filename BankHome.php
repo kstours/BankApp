@@ -5,6 +5,9 @@
     <body>
         <h1>Account Options</h1><br><br> 
         <?php
+        if ($_SESSION["account"] == ""){
+            $_SESSION["account"] = $_POST["AcntNum"];
+        }
         echo "Account Number: ".$_POST["AcntNum"];
         $Accnt = $_POST["AcntNum"];
         $_SESSION["account"] = $Accnt;
@@ -13,7 +16,7 @@
         $response = file_get_contents($url);
         echo "<br>Account Name: ";
         echo $response;
-        $url= "https://ptrbankapp2.azurewebsites.net/getbalance.php?acntnumb=$Accnt";
+        $url= "https://ptrbankapp2.azurewebsites.net/getbalance.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
         echo "<br><br>Balances: <br>";
         echo $response;
