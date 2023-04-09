@@ -4,14 +4,12 @@ session_start();
 
 <html>
     <body>
-        <p>Make Payment<p><br><br> 
+        <h1>Make Payment<h1><br><br> 
 <?php
 
-$AcntNum = $_GET['acntnumb'];
-#$AcntNum = "306655";
+#$AcntNum = $_GET['acntnumb'];
+$AcntNum = $_SESSION["account"];
 echo 'Account Number: '.$AcntNum;
-echo '<br>Session variable: '.$_SESSION["account"];
-echo '<br>Test Value: '.$_SESSION["testvalue"];
 
 $Query = "SELECT * FROM userdata WHERE ID=".$AcntNum;
 require "config.php";
@@ -28,7 +26,6 @@ try {
 unset($conn);
 $conn = null;
 
-#print $response;
 ?>
         <form action="payment.php" method="post">
             Ammount of Payment: <input type="text" name="payment"><br>

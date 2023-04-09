@@ -3,14 +3,12 @@
 ?>
 <html>
     <body>
-        <p>Account Options<p><br><br> 
+        <h1>Account Options</h1><br><br> 
         <?php
         echo "Account Number: ".$_POST["AcntNum"];
         $Accnt = $_POST["AcntNum"];
         $_SESSION["account"] = $Accnt;
-        $_SESSION["testvalue"] = "TestValue";
-        echo '<br>Session variable: '.$_SESSION["account"];
-        $url= "https://ptrbankapp2.azurewebsites.net/svculookup2.php?acntnumb=$Accnt";
+        $url= "https://ptrbankapp2.azurewebsites.net/svculookup2.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
         echo "<br>Account Name: ";
         echo $response;
