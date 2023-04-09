@@ -1,4 +1,5 @@
 <?php
+ob_start();
 
 $Payment = $_POST['payment'];
 $Accntnum = $_POST['Accnt'];
@@ -28,14 +29,14 @@ try {
     $stmt = $conn->prepare($sql);
     $stmt->execute();
 
-    header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
-    exit;
-
 }catch (PDOException $e) {
     die('<br>Select ERROR: '.$e->getMessage());
 }
 
 unset($conn);
 $conn = null;
+header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
+ob_end_flush();
+exit;
 
 ?>
