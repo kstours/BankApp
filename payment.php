@@ -16,6 +16,9 @@ try {
     echo "<br>Credit Card Balance :".$row['CCBAL'];
     echo "<br";
     $CHKBAL = floatval($row['CHKBAL']);
+    $CHKBAL = $CHKBAL - $Payment;
+    echo "<br>New Balance: ";
+    echo $CHKBAL;
 
     var_dump(is_float($CHKBAL));
 }catch (PDOException $e) {
