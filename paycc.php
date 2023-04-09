@@ -4,7 +4,7 @@ session_start();
 
 <html>
     <body>
-        <h1>Make Payment<h1><br><br> 
+        <h1>Make Payment</h1><br><br> 
         <p>
 <?php
 
@@ -39,5 +39,5 @@ $conn = null;
 
     </body>
         <br><a id="enter" href="getinfo.php">Back to Options</a><br>
-        <a id="enter" href="BankMain.php">Log Out</a><br><br>
+        <a id="enter" href="BankHome.php">Log Out</a><br><br>
     </body>
