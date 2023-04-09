@@ -9,11 +9,12 @@ session_start();
 <?php
 
 #$AcntNum = $_GET['acntnumb'];
-echo 'Session val: '.$_SESSION{"account"};
+echo 'Session val: '.$_SESSION["account"];
 $AcntNum = $_SESSION["account"];
 echo '<br>Account Number: '.$AcntNum;
 
 $Query = "SELECT * FROM userdata WHERE ID=".$AcntNum;
+echo "<br>".$Query;
 require "config.php";
 
 try {
