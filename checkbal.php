@@ -8,7 +8,7 @@ $AcntNum = $_GET['acntnumb'];
 #$AcntNum = "306655";
 echo 'Account Number: '.$AcntNum;
 
-$Query = "SELECT * FROM userdata WHERE ID=$AcntNum";
+$Query = "SELECT * FROM userdata WHERE ID=".$AcntNum;
 require "config.php";
 
 try {

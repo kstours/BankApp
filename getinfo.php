@@ -12,9 +12,6 @@
         <br><br>
         <p>Available Account Actions:<p><br><br>
         <?php
-        echo '<form method="POST" action=checkbal.php?acntnumb=$Accnt">
-            <input type="submit"/>
-            </form>';
         echo '<form method="POST" action=checkbal.php?acntnumb='.$Accnt.'">
             <input type="submit"/>
             </form>';
