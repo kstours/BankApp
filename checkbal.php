@@ -17,7 +17,7 @@ try {
     echo "<br>Checking Balance :".$row['CHKBAL'];
     echo "<br>Credit Card Balance :".$row['CCBAL'];
 }catch (PDOException $e) {
-    die('ERROR: '.$e->getMessage());
+    die('Select ERROR: '.$e->getMessage());
 }
 unset($conn);
 $conn = null;
