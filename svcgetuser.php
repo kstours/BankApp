@@ -22,7 +22,11 @@ try {
 try {
     $row=$conn->query($Query);
     $row=$row->fetch();
-    echo $row['FNAME']." rows: ".$row;
+    $response = $row['FNAME'];
+    if (strlen($response) < 1) {
+      $response != "invalid account number";
+      }
+    echo $response
 }catch (PDOException $e) {
     die('ERROR: '.$e->getMessage());
 }
