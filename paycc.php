@@ -9,13 +9,13 @@ session_start();
 <?php
 $_SESSION["payment"] = $_GET["payment"];
 
-$url= "https://ptrbankapp2.azurewebsites.net/payment.php?Accnt=".$_SESSION["account"]."&payment=".$_SESSION["payment"];
+$url= "https://ptrbankapp2.azurewebsites.net/svcpayment.php?Accnt=".$_SESSION["account"]."&payment=".$_SESSION["payment"];
 $response = file_get_contents($url);
 
 echo "<br>Payment to Credit card: ".$_SESSION["payment"]."<br>";
 echo $response;
 
-$url= "https://ptrbankapp2.azurewebsites.net/getbalance.php?acntnumb=".$_SESSION["account"];
+$url= "https://ptrbankapp2.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];
 $response = file_get_contents($url);
 echo "<br><br>New Balances: <br>";
 echo $response;
