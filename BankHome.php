@@ -19,7 +19,7 @@
         echo $response;
         ?>
         <br><br>
-        <h2>Available Account Actions:</h2><br>
+        <h2>Available Account Actions:</h2>
         <p>Make Payment to Credit Card<p>
         <form action="paycc.php" method="get">
             Amount of Payment: <input type="text" name="payment"><br>

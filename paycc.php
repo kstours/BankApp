@@ -23,6 +23,9 @@ echo $response;
 
     </body>
         <br><br><br>
-        <a id="enter" href="BankHome.php">Back to Options</a><br>
-        <a id="enter" href="logout.php">Log Out</a><br>
+        <p>
+        <button onclick="window.location.href='BankHome.php';">
+            Account Options
+        <button onclick="window.location.href='logout.php';">
+            Logout
     </body>
