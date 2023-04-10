@@ -24,12 +24,14 @@
         <br><br>
         <h2>Available Account Actions:</h2><br><br>
         <p>
-        <?php
-        echo 'Make a Credit Card Payment';
-        echo '<form method="POST" action=paycc.php?acntnumb='.$Accnt.'>
-            <input type="submit"/>
-            </form>';
-        ?>
+        <form action="paycc.php" method="get">
+            Ammount of Payment: <input type="text" name="payment"><br>
+            <?php
+            echo '<input type="hidden" id="Accnt" name="Accnt" value='.$AcntNum.'>';
+            ?>
+            <input type="submit">
+        </form>
+
         <br><br>
         <p>
         <button onclick="window.location.href='BankMain.php';">

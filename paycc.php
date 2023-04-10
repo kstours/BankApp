@@ -12,32 +12,11 @@ session_start();
 echo 'Session val: '.$_SESSION["account"];
 $AcntNum = $_SESSION["account"];
 echo '<br>Account Number: '.$AcntNum;
-
-$Query = "SELECT * FROM userdata WHERE ID=".$AcntNum;
-echo "<br>".$Query;
-require "config.php";
-
-try {
-    $row=$conn->query($Query);
-    $row=$row->fetch();
-    echo "<br>Checking Balance :".$row['CHKBAL'];
-    echo "<br>Credit Card Balance :".$row['CCBAL'];
-}catch (PDOException $e) {
-    die('<br>Select ERROR: '.$e->getMessage());
-}
-
-unset($conn);
-$conn = null;
-
+$url= "https://ptrbankapp2.azurewebsites.net/payment.php?acntnumb=".$_SESSION["account"];
+$response = file_get_contents($url);
+echo "<br>Payment Status: <br>";
+echo $response;
 ?>
-        </p>
-        <form action="payment.php" method="get">
-            Ammount of Payment: <input type="text" name="payment"><br>
-            <?php
-            echo '<input type="hidden" id="Accnt" name="Accnt" value='.$AcntNum.'>';
-            ?>
-            <input type="submit">
-        </form>
 
     </body>
         <br><a id="enter" href="getinfo.php">Back to Options</a><br>
