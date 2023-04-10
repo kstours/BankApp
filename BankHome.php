@@ -40,7 +40,7 @@
         <br><br>
         <p>
         <button onclick="window.location.href='logout.php';">
-            Return to Login</button>
+            Logout</button>
     </body>
 
 </html>
