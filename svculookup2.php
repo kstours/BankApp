@@ -22,7 +22,7 @@ try {
 try {
     $row=$conn->query($Query);
     $row=$row->fetch();
-    echo $row['FNAME'];
+    echo $row['FNAME']." rows: ".$row;
 }catch (PDOException $e) {
     die('ERROR: '.$e->getMessage());
 }

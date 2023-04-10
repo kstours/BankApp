@@ -26,6 +26,7 @@ echo $response;
         <p>
         <button onclick="window.location.href='BankHome.php';">
             Account Options
-        <button onclick="window.location.href='logout.php';">
+        
+        <br><button onclick="window.location.href='logout.php';">
             Logout
     </body>
