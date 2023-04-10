@@ -17,7 +17,7 @@ echo $response;
 
 $url= "https://ptrbankapp2.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];
 $response = file_get_contents($url);
-echo "<br><br>New Balances: <br>";
+echo "<p><br><br>Balances: <br>";
 echo $response;
 ?>
 
@@ -26,7 +26,7 @@ echo $response;
         <p>
         <button onclick="window.location.href='BankHome.php';">
             Account Options</button>
-        <br>
+        <br><br>
         <button onclick="window.location.href='logout.php';">
             Logout</button>
     </body>
