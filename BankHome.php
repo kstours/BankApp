@@ -1,5 +1,6 @@
 <?php
         session_start();
+        ob_start();
 ?>
 <html>
     <body>
@@ -17,8 +18,12 @@
             $url= "https://ptrbankapp2.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];
             $response = file_get_contents($url);
             echo "<br><br>Balances: <br>";
-        }
             echo $response;
+        } else{
+            header('Location:https://ptrbankapp2.azurewebsites.net/invalid.php');
+            ob_end_flush();
+        }
+
         
         ?>
         <br><br>
@@ -35,7 +40,7 @@
         <br><br>
         <p>
         <button onclick="window.location.href='logout.php';">
-            Logout
+            Return to Login</button>
     </body>
 
 </html>
