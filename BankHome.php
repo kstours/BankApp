@@ -3,7 +3,8 @@
 ?>
 <html>
     <body>
-        <h1>Account Options</h1><br><br> 
+        <h1>Account Options</h1><br><br>
+        <p>Make a Credit CArd Payment<p><br> 
         <?php
         if (strlen($_SESSION["account"]) < 3){
             $_SESSION["account"] = $_POST["AcntNum"];
@@ -20,9 +21,9 @@
         ?>
         <br><br>
         <h2>Available Account Actions:</h2><br><br>
-        <p>
+        <p>Make Payment to Credit Card<p><br>
         <form action="paycc.php" method="get">
-            Ammount of Payment: <input type="text" name="payment"><br>
+            Amount of Payment: <input type="text" name="payment"><br>
             <?php
             echo '<input type="hidden" id="Accnt" name="Accnt" value='.$_SESSION["account"].'>';
             ?>
