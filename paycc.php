@@ -4,7 +4,7 @@ session_start();
 
 <html>
     <body>
-        <h1>Make Payment</h1><br><br> 
+        <h1>Make Payment</h1><br> 
         <p>
 <?php
 $_SESSION["payment"] = $_GET["payment"];
@@ -24,5 +24,5 @@ echo $response;
     </body>
         <br><br><br>
         <a id="enter" href="BankHome.php">Back to Options</a><br>
-        <a id="enter" href="index.html">Log Out</a><br><br>
+        <a id="enter" href="logout.php">Log Out</a><br>
     </body>
