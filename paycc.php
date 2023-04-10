@@ -31,7 +31,7 @@ $conn = null;
 
 ?>
         </p>
-        <form action="payment.php" method="post">
+        <form action="payment.php" method="get">
             Ammount of Payment: <input type="text" name="payment"><br>
             <?php
             echo '<input type="hidden" id="Accnt" name="Accnt" value='.$AcntNum.'>';

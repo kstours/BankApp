@@ -1,8 +1,8 @@
 <?php
 ob_start();
 
-$Payment = $_POST['payment'];
-$Accntnum = $_POST['Accnt'];
+$Payment = $_GET['payment'];
+$Accntnum = $_GET['Accnt'];
 echo '<br>Payment: '.$Payment;
 echo '<br>Account: '.$Accntnum;
 
