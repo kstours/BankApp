@@ -5,12 +5,9 @@
     <body>
         <h1>Account Options</h1><br><br> 
         <?php
-        if ($_SESSION["account"] == ""){
+        if (strlen($_SESSION["account"]) < 3){
             $_SESSION["account"] = $_POST["AcntNum"];
         }
-        echo "Account Number: ".$_POST["AcntNum"];
-        $Accnt = $_POST["AcntNum"];
-        $_SESSION["account"] = $Accnt;
         echo "Account Number: ".$_SESSION["account"];
         $url= "https://ptrbankapp2.azurewebsites.net/svculookup2.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
@@ -27,7 +24,7 @@
         <form action="paycc.php" method="get">
             Ammount of Payment: <input type="text" name="payment"><br>
             <?php
-            echo '<input type="hidden" id="Accnt" name="Accnt" value='.$AcntNum.'>';
+            echo '<input type="hidden" id="Accnt" name="Accnt" value='.$_SESSION["account"].'>';
             ?>
             <input type="submit">
         </form>
