@@ -21,7 +21,7 @@ try {
         $stmt->execute();
         echo "success";
     } else {
-        echo " insufficient balance ";
+        echo "<h2> insufficient balance<h2> ";
     }
 
 }catch (PDOException $e) {

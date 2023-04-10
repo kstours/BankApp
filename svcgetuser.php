@@ -23,7 +23,6 @@ try {
     $row=$conn->query($Query);
     $row=$row->fetch();
     $response = $row['FNAME'];
-    echo strlen($response);
     if (strlen($response) < 1) {
       $response = "invalid account number ";
       }
