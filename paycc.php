@@ -7,12 +7,11 @@ session_start();
         <h1>Make Payment</h1><br><br> 
         <p>
 <?php
-
+$_SESSION["payment"] = $_GET["payment"];
 #$AcntNum = $_GET['acntnumb'];
 echo 'Session val: '.$_SESSION["account"];
-$AcntNum = $_SESSION["account"];
-echo '<br>Account Number: '.$AcntNum;
-$url= "https://ptrbankapp2.azurewebsites.net/payment.php?acntnumb=".$_SESSION["account"];
+$url= "https://ptrbankapp2.azurewebsites.net/payment.php?Accnt=".$_SESSION["account"]."&payment=".$_SESSION["payment"];
+echo "<br>".$url;
 $response = file_get_contents($url);
 echo "<br>Payment Status: <br>";
 echo $response;
