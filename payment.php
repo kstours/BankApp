@@ -1,5 +1,5 @@
 <?php
-ob_start();
+#ob_start();
 
 $Payment = $_GET['payment'];
 $Accntnum = $_GET['Accnt'];
@@ -35,8 +35,8 @@ try {
 
 unset($conn);
 $conn = null;
-header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
-ob_end_flush();
+#header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
+#ob_end_flush();
 exit;
 
 ?>
