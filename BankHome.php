@@ -11,7 +11,7 @@
         echo "Account Number: ".$_SESSION["account"];
         $url= "https://ptrbankapp2.azurewebsites.net/svcgetuser.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
-        if ($response != "invalid account number") {
+        if ($response != "invalid account number ") {
             echo "<br>Account Name: ";
             echo $response;
             $url= "https://ptrbankapp2.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];

@@ -25,7 +25,7 @@ try {
     $response = $row['FNAME'];
     echo strlen($response);
     if (strlen($response) < 1) {
-      $response != "invalid account number ";
+      $response = "invalid account number ";
       }
     echo $response;
 }catch (PDOException $e) {

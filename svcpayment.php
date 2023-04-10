@@ -13,12 +13,16 @@ try {
     $row=$row->fetch();
     $CHKBAL = floatval($row['CHKBAL']);
     $CCBAL = floatval($row['CCBAL']);
-    $CHKBAL = $CHKBAL - $Payment;
-    $CCBAL = $CCBAL - $Payment;
-    $sql = "UPDATE userdata SET CHKBAL =".$CHKBAL.",CCBAL=".$CCBAL." WHERE ID=".$Accntnum;
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-    echo "success";
+    if ($CHKBAL > $Payment) {
+        $CHKBAL = $CHKBAL - $Payment;
+        $CCBAL = $CCBAL - $Payment;
+        $sql = "UPDATE userdata SET CHKBAL =".$CHKBAL.",CCBAL=".$CCBAL." WHERE ID=".$Accntnum;
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        echo "success";
+    } else {
+        echo " insufficient balance ";
+    }
 
 }catch (PDOException $e) {
     die('<br>Select ERROR: '.$e->getMessage());
