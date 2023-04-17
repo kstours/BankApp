@@ -34,12 +34,12 @@
             <?php
             echo '<input type="hidden" id="Accnt" name="Accnt" value='.$_SESSION["account"].'>';
             ?>
-            <input type="submit">
+            <input type="submit", id='submit'>
         </form>
 
         <br><br>
         <p>
-        <button onclick="window.location.href='logout.php';">
+        <button, id="logout", onclick="window.location.href='logout.php';">
             Logout</button>
     </body>
 
