@@ -7,7 +7,7 @@
 
 <form action="BankHome.php" method="post">
     Enter Account Number: <input type="text" name="AcntNum"><br>
-    <input type="submit">
+    <input type="submit" id="submit">
 </form>
 
 
