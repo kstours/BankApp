@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Application Status</h1>
+<h1>Application Status1</h1>
 <p>Authorized Use Only</p><br><br>
 <p>Web site is up<p>
 <?php
 $servername = "jwu-bankapp-server.mysql.database.azure.com";
 $username = "ogvxwnfife";
-$password = "tX24DD$ss468";
+$password = "tX24DD!ss468";
 $dbname = "jwu-bankapp-database";
 
 echo " PHP is working";

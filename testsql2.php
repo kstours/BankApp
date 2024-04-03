@@ -1,4 +1,4 @@
-<h1>Application Status</h1>
+<h1>Application Status2</h1>
 <p>Authorized Use Only</p><br><br>
 <p>Web site is up<p>
 <?php
