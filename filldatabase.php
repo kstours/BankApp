@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Add Record to Database</h1>
+<h1>Add Records to Database</h1>
 <p>Authorized Use Only</p><br><br>
 
 <?php
@@ -16,6 +16,7 @@ echo " ";
 try  {
     $conn = mysqli_init();
     mysqli_real_connect($conn, $servername, $username, $password, $dbname, 3306);
+    echo 'connection established';
 } catch (Exception $e)  {
     echo 'Failed to connect to MySQL: '.$e->getMessage();
 }
@@ -26,6 +27,7 @@ try {
     mysqli_stmt_execute($stmt);
     printf($stmt);
     mysqli_stmt_close($stmt);
+    echo 'entry added';
 }catch (Exception $e)  {
     echo 'Failed to insert to MySQL: '.$e->getMessage();
 }
@@ -33,6 +35,7 @@ try {
 mysqli_close($conn);
 ?>
 
+<br><br><p>Authorized Use Only</p><br><br>
 <br><a id="exit" href="index.html">Exit Test Page</a><br>
 </body>
 </html>
