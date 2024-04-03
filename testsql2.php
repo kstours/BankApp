@@ -4,7 +4,7 @@
 <?php
 $host = "jwu-bankapp-server.mysql.database.azure.com";
 $username = "ogvxwnfife";
-$password = "tX24DD$ss468";
+$password = "tX24DD!ss468";
 $db_name = "jwu-bankapp-database";
 
 echo " PHP is working";
