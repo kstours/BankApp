@@ -4,5 +4,5 @@ session_start();
 session_unset();
 session_destroy();
 
-header('Location:https://ptrbankapp2.azurewebsites.net/BankMain.php');
+header('Location:https://jwu-bankapp.azurewebsites.net/BankMain.php');
 ?>

@@ -28,7 +28,7 @@ class TableRows extends RecursiveIteratorIterator {
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-  $stmt = $conn->prepare("SELECT ID, FNAME, CHKBAL FROM userdata where ID=306655");
+  $stmt = $conn->prepare("SELECT ID, FNAME, CHKBAL FROM userdata where ID=100");
   $stmt->execute();
 
   // set the resulting array to associative
