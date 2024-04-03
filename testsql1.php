@@ -16,7 +16,8 @@ $conn = mysqli_init();
 mysqli_ssl_set($conn,NULL,NULL, "/var/www/html/DigiCertGlobalRootCA.crt.pem", NULL, NULL);
 mysqli_real_connect($conn, 'jwu-bankapp-server.mysql.database.azure.com', 'ogvxwnfife', 'tX24DD$ss468', 'jwu-bankapp-database', 3306, MYSQLI_CLIENT_SSL);
 if (mysqli_connect_errno($conn)) {
-die('Failed to connect to MySQL: '.mysqli_connect_error());
+    echo " SQL Error.   ";
+    die('Failed to connect to MySQL: '.mysqli_connect_error());
 }
 
 //Run the Select query
