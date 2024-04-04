@@ -23,12 +23,15 @@ try {
     $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24200, "King, Stephen" ,100.00,100.00)';
     echo "<br>";
     echo $stmt;
-    mysqli_stmt_execute($stmt);
-    echo "<br>Executed....";
+    if ($conn->query($stmt) == True) {
+        echo "<br>Executed....";
 //    mysqli_stmt_close($stmt);
-    echo '<br>entry added';
-}catch (Exception $e)  {
-    echo '<br>Failed to insert to MySQL: '.$e->getMessage();
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    }catch (Exception $e)  {
+        echo '<br>Failed to insert to MySQL: '.$e->getMessage();
 }
 // Close the connection
 mysqli_close($conn);
