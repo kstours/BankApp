@@ -24,8 +24,8 @@ try {
     echo "<br>";
     echo $stmt;
     mysqli_stmt_execute($stmt);
-    printf($stmt);
-    mysqli_stmt_close($stmt);
+    echo "<br>Executed....";
+//    mysqli_stmt_close($stmt);
     echo '<br>entry added';
 }catch (Exception $e)  {
     echo '<br>Failed to insert to MySQL: '.$e->getMessage();
