@@ -1,8 +1,8 @@
 <?php
-$servername = "jwu-bankapp-server.mysql.database.azure.com";
-$username = "ogvxwnfife";
+$servername = "jwu-bankapp-dev1-server.mysql.database.azure.com";
+$username = "dqnceprrxt";
 $password = "tX24DD!ss468";
-$dbname = "jwu-bankapp-database";
+$dbname = "jwu-bankapp-dev1-database";
 
 try {
   $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
