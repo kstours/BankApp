@@ -20,7 +20,7 @@ try  {
 
 //Create an Insert prepared statement and run it
 try {
-    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24200, "King, Stephen" ,100.00,100.00)';
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24300, "Koontz, Dean" ,100.00,100.00)';
     echo "<br>";
     echo $stmt;
     if ($conn->query($stmt) == True) {
