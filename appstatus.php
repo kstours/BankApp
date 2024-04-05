@@ -18,13 +18,27 @@ try {
   $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
   echo "<br>Database is online";
 } catch(PDOException $e) {
-  echo "Databse Connection Failed: " . $e->getMessage();
+  echo "Database Connection Failed: " . $e->getMessage();
 }
+
+$stmt = $conn->prepare("SELECT ID, FNAME FROM userdata where ID=998877");
+
+try {
+  $row=$conn->query($stmt);
+  $row=$row->fetch();
+  $response = $row['FNAME'];
+  if (strlen($response) < 1) {
+    $response = "SQL Test Query FAILED!!";
+    }
+  echo "SQL Test Query PASSED";
+}catch (PDOException $e) {
+  die('ERROR: '.$e->getMessage());
+}
+
 $conn = null;
 
 ?>
-<br><br><a id="querytest" href="testquery.php">Run Test Query</a><br><br>
-<br><br><a id="addrecord" href="filldatabase.php">Add Record</a><br><br>
+
 <br><a id="exit" href="index.html">Exit Test Page</a><br>
 </body>
 </html>

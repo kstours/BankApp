@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Application Status</h1>
+<h1>System Management Page</h1>
 <p>Authorized Use Only</p><br><br>
 <p>Web site is up<p><br><br>
 <?php

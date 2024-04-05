@@ -30,7 +30,7 @@ try {
 
 unset($conn);
 $conn = null;
-#header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
+#header('Location:https://jwu-bankapp-dev1.azurewebsites.net/BankHome.php');
 #ob_end_flush();
 exit;
 
