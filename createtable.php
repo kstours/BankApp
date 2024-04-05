@@ -20,13 +20,12 @@ try  {
 
 // Run the create table query
 if (mysqli_query($conn, '
-CREATE TABLE Products (
-`Id` INT NOT NULL AUTO_INCREMENT ,
-`ProductName` VARCHAR(200) NOT NULL ,
-`Color` VARCHAR(50) NOT NULL ,
-`Price` DOUBLE NOT NULL ,
-PRIMARY KEY (`Id`)
-);
+create table userdata (
+    ID int NOT NULL,
+    FNAME varchar(50) NOT NULL,
+    CHKBAL dec(12,2),
+    CCBAL dec(12,2)
+    );
 ')) {
 printf("Table created\n");
 }
