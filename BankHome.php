@@ -1,6 +1,7 @@
 <?php
         session_start();
         ob_start();
+        $environment='https://jwu-bankapp-dev1.azurewebsites.net';
 ?>
 <html>
     <body>
@@ -10,12 +11,12 @@
             $_SESSION["account"] = $_POST["AcntNum"];
         }
         echo "Account Number: ".$_SESSION["account"];
-        $url= "/svcgetuser.php?acntnumb=".$_SESSION["account"];
+        $url= "$environment/svcgetuser.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
         if ($response != "invalid account number ") {
             echo "<br>Account Name: ";
             echo $response;
-            $url= "/svcgetbalance.php?acntnumb=".$_SESSION["account"];
+            $url= "$environment/svcgetbalance.php?acntnumb=".$_SESSION["account"];
             $response = file_get_contents($url);
             echo "<br><br>Balances: <br>";
             echo $response;
