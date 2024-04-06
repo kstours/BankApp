@@ -1,7 +1,3 @@
-<?php
-echo "here is some php from the include"
-
-?>
 
 <p>
 <img src="/images/logo.jpg" alt="logo" style="float:right;width 50px;height 50px;">
@@ -13,7 +9,3 @@ echo "here is some php from the include"
 <br><br>
 <a id="enter" href="BankMain.php">Bank App Home</a><br><br>
 
-<?php
-echo "here is the end of the include"
-
-?>

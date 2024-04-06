@@ -2,8 +2,9 @@
 <html>
 <body>
 
-<h1>Start Page</h1>
-<p>Authorized Use Only</p>
+<?php
+include 'header.php';
+?>
 
 <form action="BankHome.php" method="post">
     Enter Account Number: <input type="text" name="AcntNum"><br>
