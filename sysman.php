@@ -5,10 +5,7 @@
 <p>Authorized Use Only</p><br><br>
 <p>Web site is up<p><br><br>
 <?php
-$servername = "jwu-bankapp-dev1-server.mysql.database.azure.com";
-$username = "dqnceprrxt";
-$password = "tX24DD!ss468";
-$dbname = "jwu-bankapp-dev1-database";
+require 'config.php';
 
 echo "Host: $servername   DB: $dbname<br><br>";
 
