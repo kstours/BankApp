@@ -6,8 +6,10 @@
 <p>Web site is up<p><br><br>
 <?php
 require 'config.php';
+include 'environment.php';
 
-echo "Host: $servername   DB: $dbname<br><br>";
+echo "Host: $servername   DB: $dbname<br>";
+echo "Environment: $environment<br><br>";
 
 echo " PHP is working<br><br>";
 
