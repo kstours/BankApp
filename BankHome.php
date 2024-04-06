@@ -1,7 +1,7 @@
 <?php
         session_start();
         ob_start();
-        $environment='https://jwu-bankapp-dev1.azurewebsites.net';
+        include 'environment.php';
 ?>
 <html>
     <body>
