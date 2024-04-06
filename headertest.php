@@ -6,7 +6,7 @@
 <?php
 echo "here is some php before the header";
 
-include header.php; 
+include 'header.php'; 
 ?>
 
 <?php
