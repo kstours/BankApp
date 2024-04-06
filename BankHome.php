@@ -10,17 +10,17 @@
             $_SESSION["account"] = $_POST["AcntNum"];
         }
         echo "Account Number: ".$_SESSION["account"];
-        $url= "svcgetuser.php?acntnumb=".$_SESSION["account"];
+        $url= "/svcgetuser.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
         if ($response != "invalid account number ") {
             echo "<br>Account Name: ";
             echo $response;
-            $url= "svcgetbalance.php?acntnumb=".$_SESSION["account"];
+            $url= "/svcgetbalance.php?acntnumb=".$_SESSION["account"];
             $response = file_get_contents($url);
             echo "<br><br>Balances: <br>";
             echo $response;
         } else{
-            header('invalid.php');
+            header('/invalid.php');
             ob_end_flush();
         }
 

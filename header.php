@@ -6,6 +6,7 @@
 
 <p>Authorized Use Only</p>
 <p>This website is for testing purposes</p>
-<br><br>
+
 <a id="enter" href="BankMain.php">Bank App Home</a><br><br>
+<br><br>
 
