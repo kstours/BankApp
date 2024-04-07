@@ -5,5 +5,5 @@ session_unset();
 session_destroy();
 #include 'environment.php';
 
-header('/BankMain.php');
+header('Location: /BankMain.php');
 ?>

@@ -21,7 +21,7 @@
             echo "<br><br>Balances: <br>";
             echo $response;
         } else{
-            header('/invalid.php');
+            header('Location:/invalid.php');
             ob_end_flush();
         }
 
