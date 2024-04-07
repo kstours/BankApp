@@ -8,7 +8,7 @@
 require 'config.php';
 include 'environment.php';
 
-echo "Host: $servername   DB: $dbname<br>";
+echo "Host: $servername   <br>DB: $dbname<br>";
 echo "Environment: $environment<br><br>";
 
 echo " PHP is working<br><br>";
