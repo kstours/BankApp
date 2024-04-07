@@ -2,6 +2,7 @@
         session_start();
         ob_start();
         include 'environment.php';
+        include 'header.php';
 ?>
 <html>
     <body>
@@ -40,7 +41,8 @@
 
         <br><br>
         <p>
-        <button, id="logout", onclick="window.location.href='logout.php';">
+
+        <button id="logout", onclick="window.location.href='logout.php';">
             Logout</button>
     </body>
 
