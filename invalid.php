@@ -1,4 +1,6 @@
 <?php
+include 'header.php';
+
 echo "<br><br><h2>Invalid Account Number<h2>"
 
 ?>

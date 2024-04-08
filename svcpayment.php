@@ -9,6 +9,14 @@ $Query = "SELECT * FROM userdata WHERE ID=".$Accntnum;
 require "config.php";
 
 try {
+    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+  
+  } catch(PDOException $e) {
+    echo "Connect Error: " . $e->getMessage();
+  }
+
+try {
     $row=$conn->query($Query);
     $row=$row->fetch();
     $CHKBAL = floatval($row['CHKBAL']);
@@ -30,7 +38,7 @@ try {
 
 unset($conn);
 $conn = null;
-#header('Location:https://ptrbankapp2.azurewebsites.net/BankHome.php');
+#header('Location:https://jwu-bankapp-dev1.azurewebsites.net/BankHome.php');
 #ob_end_flush();
 exit;
 

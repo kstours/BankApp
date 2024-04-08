@@ -1,5 +1,6 @@
 <?php
 session_start();
+include 'header.php';
 ?>
 
 <html>
@@ -9,13 +10,13 @@ session_start();
 <?php
 $_SESSION["payment"] = $_GET["payment"];
 
-$url= "https://jwu-bankapp.azurewebsites.net/svcpayment.php?Accnt=".$_SESSION["account"]."&payment=".$_SESSION["payment"];
+$url= "https://jwu-bankapp-dev1.azurewebsites.net/svcpayment.php?Accnt=".$_SESSION["account"]."&payment=".$_SESSION["payment"];
 $response = file_get_contents($url);
 
 echo "<br>Payment to Credit card: ".$_SESSION["payment"]."<br>";
 echo $response;
 
-$url= "https://jwu-ptrbankapp.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];
+$url= "https://jwu-bankapp-dev1.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];
 $response = file_get_contents($url);
 echo "<p><br><br>Balances: <br>";
 echo $response;

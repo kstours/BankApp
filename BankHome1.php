@@ -1,8 +1,6 @@
 <?php
         session_start();
         ob_start();
-        include 'environment.php';
-        include 'header.php';
 ?>
 <html>
     <body>
@@ -12,17 +10,17 @@
             $_SESSION["account"] = $_POST["AcntNum"];
         }
         echo "Account Number: ".$_SESSION["account"];
-        $url= "$environment/svcgetuser.php?acntnumb=".$_SESSION["account"];
+        $url= "https://jwu-bankapp-dev1.azurewebsites.net/svcgetuser.php?acntnumb=".$_SESSION["account"];
         $response = file_get_contents($url);
         if ($response != "invalid account number ") {
             echo "<br>Account Name: ";
             echo $response;
-            $url= "$environment/svcgetbalance.php?acntnumb=".$_SESSION["account"];
+            $url= "https://jwu-bankapp-dev1.azurewebsites.net/svcgetbalance.php?acntnumb=".$_SESSION["account"];
             $response = file_get_contents($url);
             echo "<br><br>Balances: <br>";
             echo $response;
         } else{
-            header('Location:/invalid.php');
+            header('Location:https://jwu-bankapp-dev1.azurewebsites.net/invalid.php');
             ob_end_flush();
         }
 
@@ -41,8 +39,7 @@
 
         <br><br>
         <p>
-
-        <button id="logout", onclick="window.location.href='logout.php';">
+        <button, id="logout", onclick="window.location.href='logout.php';">
             Logout</button>
     </body>
 

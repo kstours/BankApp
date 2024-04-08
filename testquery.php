@@ -1,8 +1,5 @@
 <?php
-$servername = "jwu-bankapp-server.mysql.database.azure.com";
-$username = "ogvxwnfife";
-$password = "tX24DD!ss468";
-$dbname = "jwu-bankapp-database";
+require 'config.php';
 
 echo "<table style='border: solid 1px black;'>";
 echo "<tr><th>Id</th><th>Firstname</th><th>Chk Bal</th></tr>";
