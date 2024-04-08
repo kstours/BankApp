@@ -20,7 +20,7 @@ try  {
 
 //Create an Insert prepared statement and run it
 try {
-    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Poe, Edgar" ,1000.00,400.00)';
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24220, "Smith, Adam" ,10000.00,400.00)';
     echo "<br>";
     echo $stmt;
     if ($conn->query($stmt) == True) {
@@ -28,7 +28,7 @@ try {
     } else {
         echo '<br>entry failed';
     }
-    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Wells, H.G." ,10000.00,300.00)';
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24230, "Ford, Henry" ,10000.00,400.00)';
     echo "<br>";
     echo $stmt;
     if ($conn->query($stmt) == True) {
@@ -36,7 +36,64 @@ try {
     } else {
         echo '<br>entry failed';
     }
-    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Bledsoe, Drew" ,15000.00,600.00)';
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24240, "Edison, Thomas" ,1000.00,400.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24250, "Parks, Rosa" ,10000.00,400.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24260, "Airhart, Emelia" ,10000.00,400.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24270, "Ride, Sally" ,10000.00,400.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24280, "Lamarr, Hedy" ,10000.00,400.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24290, "Musk, Elon" ,10000.00,400.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24291, "Bezos, Jeff" ,10000.00,300.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24292, "Buffett, Warren" ,15000.00,600.00)';
     echo "<br>";
     echo $stmt;
     if ($conn->query($stmt) == True) {
