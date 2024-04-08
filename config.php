@@ -1,8 +1,8 @@
 <?php
-$servername = "jwu-bankapp-dev1-server.mysql.database.azure.com";
-$username = "dqnceprrxt";
+$servername = "jwu-bankapp-server.mysql.database.azure.com";
+$username = "ogvxwnfife";
 $password = "tX24DD!ss468";
-$dbname = "jwu-bankapp-dev1-database";
+$dbname = "jwu-bankapp-database";
 
 
 ?>

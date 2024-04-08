@@ -1,3 +1,3 @@
 <?php
-$environment='https://jwu-bankapp-dev1.azurewebsites.net';
+$environment='https://jwu-bankapp.azurewebsites.net';
 ?>
