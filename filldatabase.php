@@ -20,12 +20,26 @@ try  {
 
 //Create an Insert prepared statement and run it
 try {
-    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Martinez, Pedro" ,100.00,100.00)';
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Poe, Edgar" ,1000.00,400.00)';
     echo "<br>";
     echo $stmt;
     if ($conn->query($stmt) == True) {
-        echo "<br>Executed....";
-//    mysqli_stmt_close($stmt);
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Wells, H.G." ,10000.00,300.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
+        echo '<br>entry added';
+    } else {
+        echo '<br>entry failed';
+    }
+    $stmt = 'insert into userdata (ID, FNAME, CHKBAL, CCBAL) values (24120, "Bledsoe, Drew" ,15000.00,600.00)';
+    echo "<br>";
+    echo $stmt;
+    if ($conn->query($stmt) == True) {
         echo '<br>entry added';
     } else {
         echo '<br>entry failed';

@@ -4,7 +4,7 @@ from selenium.webdriver.common.by import By
 
 driver = webdriver.Chrome()
 
-driver.get("https://ptrbankapp2.azurewebsites.net")
+driver.get("https://jwu-bankapp.azurewebsites.net")
 
 time.sleep(5)
 p2link=driver.find_element(By.PARTIAL_LINK_TEXT,"Enter Bank")
